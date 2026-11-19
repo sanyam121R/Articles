@@ -1,4 +1,10 @@
-# How Cloudflare carries a request
+---
+title: "How Cloudflare Carries a Request"
+date: "2026-11-07"
+description: "How a proxied request moves through Cloudflare: anycast admission, the edge data path, cache vs origin, human-in-the-loop guardrails at scale, and where state is allowed to live."
+tags: ["cloudflare", "networking", "anycast", "cdn", "distributed-systems", "system-design"]
+link: ""
+---
 
 Cloudflare sits in front of a large share of the public web, spread across thousands of servers in 330+ cities, and it is built to keep answering when machines and cities disappear. The interesting part is not a single trick. A request is admitted by one distributed system, answered by a second, and configured by a third. They fail in different ways, and they are repaired in different ways.
 
