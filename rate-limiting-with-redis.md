@@ -1,5 +1,6 @@
 ---
 title: "Rate Limiting with Redis: From First Principles"
+slug: "rate-limiting-with-redis"
 date: "2025-06-18"
 description: "A deep dive into rate limiting concepts from first principles — covering Redis fundamentals, atomicity, race conditions, and practical implementations with code examples."
 tags: ["redis", "rate-limiting", "backend", "distributed-systems", "algorithms"]

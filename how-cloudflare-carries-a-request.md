@@ -1,5 +1,6 @@
 ---
 title: "How Cloudflare Carries a Request"
+slug: "cloudflare"
 date: "2026-11-07"
 description: "How a proxied request moves through Cloudflare: anycast admission, the edge data path, cache vs origin, human-in-the-loop guardrails at scale, and where state is allowed to live."
 tags: ["cloudflare", "networking", "anycast", "cdn", "distributed-systems", "system-design"]

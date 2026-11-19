@@ -1,5 +1,6 @@
 ---
 title: "Database Pages: The Fundamental Unit of Storage"
+slug: "database-pages"
 date: "2025-03-12"
 description: "Understanding how databases store data in pages — the fundamental building block that shapes everything from indexes to sharding."
 tags: ["database", "storage", "pages", "buffer-pool", "sharding", "fundamentals"]
