@@ -1,24 +1,27 @@
 # Articles
 
-Source for [portfolio blog posts](https://sanyam121r.vercel.app/blogs). Each published `.md` file is one **article** (one thesis), fetched from this repo at build time.
+Source for [portfolio blog posts](https://sanyam121r.vercel.app/blogs). Each published `.md` file is one **article**, fetched from this repo at build time.
 
-## File naming
+## File naming and routes
+
+The **filename** (without `.md`) is the blog **route**: `how-cloudflare-carries-a-request.md` → `/blogs/how-cloudflare-carries-a-request`.
+
+Name files after **this article**, not the whole topic:
 
 | Don't | Do |
 | --- | --- |
-| Name after a **topic** (`cloudflare.md`, `Redis.md`) | Name after **this article** (`how-cloudflare-carries-a-request.md`, `rate-limiting-with-redis.md`) |
-| Mix `PascalCase` and `kebab-case` | Use **kebab-case** only for `.md` files |
+| `cloudflare.md` (implies everything about Cloudflare) | `how-cloudflare-carries-a-request.md` |
+| `Redis.md` | `rate-limiting-with-redis.md` |
 
-You can write many articles on the same topic; each gets its own file, for example `how-cloudflare-carries-a-request.md` and later `cloudflare-workers-and-consistency.md`.
+Use **kebab-case** only. You can publish many articles on one topic with different filenames.
 
-The portfolio **URL** defaults to the filename without `.md`. Override with optional `slug` in frontmatter (e.g. keep `/blogs/cloudflare` while the file stays descriptive).
+`title` in frontmatter is for the **card and page heading** only — it does not change the URL. If you want a specific route, set the filename to match (kebab-case version of the title is fine).
 
 ## Publishing checklist
 
 ```yaml
 ---
-title: "Human title for the card and <h1>"
-slug: "optional-short-url"   # default: filename without .md
+title: "Human title for the card and page"
 date: "YYYY-MM-DD"
 description: "One or two sentences for the blog card."
 tags: ["tag-one", "tag-two"]
@@ -36,9 +39,9 @@ After push, the Articles webhook revalidates the `articles` cache on Vercel (or 
 
 ## Index
 
-| URL slug | File | What it is (not “all of X”) |
-| --- | --- | --- |
-| [cloudflare](how-cloudflare-carries-a-request.md) | Request path: anycast, edge, cache vs origin | One Cloudflare article |
-| [database-pages](database-pages-fundamental-unit-of-storage.md) | Pages, buffer pool, link to sharding | One storage fundamentals article |
-| [rate-limiting-with-redis](rate-limiting-with-redis.md) | Rate limiting from first principles via Redis | One Redis article |
-| [database-sharding](database-sharding-from-first-principles.md) | Sharding reference / interview depth | One sharding article |
+| Route | File |
+| --- | --- |
+| `/blogs/how-cloudflare-carries-a-request` | [how-cloudflare-carries-a-request.md](how-cloudflare-carries-a-request.md) |
+| `/blogs/database-pages-fundamental-unit-of-storage` | [database-pages-fundamental-unit-of-storage.md](database-pages-fundamental-unit-of-storage.md) |
+| `/blogs/rate-limiting-with-redis` | [rate-limiting-with-redis.md](rate-limiting-with-redis.md) |
+| `/blogs/database-sharding-from-first-principles` | [database-sharding-from-first-principles.md](database-sharding-from-first-principles.md) |
